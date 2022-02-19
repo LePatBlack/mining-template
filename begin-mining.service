@@ -1,0 +1,13 @@
+[Unit]
+Description=Begin Mining
+After=network.target
+
+[Service]
+ExecStart=/home/retro/MiningShit/t-rex/ETH-flexpool.sh /home/retro/MiningShit/xmrig/xmrig
+SyslogIdentifier=controller
+User=root
+Group=root
+Environment=
+
+[Install]
+WantedBy=multi-user.target
